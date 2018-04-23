@@ -1,0 +1,36 @@
+{
+  "name": "catalog",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "license": "-",
+  "scripts": {
+    "start": "node dist/index.js",
+    "start:dev": "babel-watch src/index.js",
+    "build": "npm run clean && babel src --out-dir dist --copy-files",
+    "clean": "rm -rf dist",
+    "lint": "eslint src",
+    "prepush": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "hapi": "^17.3.1",
+    "winston": "^3.0.0-rc1"
+  },
+  "devDependencies": {
+    "@geeny/eslint-config-geeny": "^1.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-watch": "^2.0.7",
+    "eslint": "^4.19.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-config-hapi": "^11.1.0",
+    "jest-cli": "^22.1.4"
+  }
+}
