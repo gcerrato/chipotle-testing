@@ -6,7 +6,7 @@ const Logger = createLogger({
   format: combine(
     colorize(),
     timestamp(),
-    printf(info => `${info.timestamp} ${info.level}: ${info.message}`),
+    printf((info) => `${info.timestamp} ${info.level}: ${info.message}`),
   ),
   transports: [
     new transports.Console(),

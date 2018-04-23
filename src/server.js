@@ -3,8 +3,8 @@ import Logger from './logger';
 
 const PORT = process.env.PORT;
 const server = Hapi.server({
-    port: PORT,
-    host: 'localhost'
+  port: PORT,
+  host: 'localhost'
 });
 
 const init = async () => {
